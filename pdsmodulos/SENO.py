@@ -35,7 +35,7 @@ def SENO( vmax=1, dc=0, ff=1, N =100, ph=0, FS=1000.0):
 
     x1=np.linspace(0, (N-1), N).flatten()
     
-    y1=np.sin(2*np.pi*x1*ff*Ts).flatten()
+    y1=dc + vmax*np.sin(2*np.pi*x1*ff*Ts + ph).flatten()
 
     
     
@@ -45,7 +45,7 @@ def SENO( vmax=1, dc=0, ff=1, N =100, ph=0, FS=1000.0):
 
 #%%   
      
-#x,y=SENO(N=1000)
+#x,y=SENO(vmax=2, dc=1, ff=10, N=1000)
     
 #plt.plot(x, y, 'red' )
     
